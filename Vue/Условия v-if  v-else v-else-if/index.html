@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <p v-if="show">hello true</p>
+        <p v-if="!show">hello false</p> <br>
+
+        <p v-if="showName">{{ name }}</p> <br>
+        <button v-if="showName" @click="hideName1">Спрятать Имя</button>
+        <button v-if="!showName" @click="hideName2">Показать Имя</button> <br>
+
+        <p v-if="toggle">hello</p> <br>
+        <button @click="toggleElem">Click</button> <br>
+
+        <ul v-if="showItems">
+            <li v-for="item in items">{{ item }}</li>
+        </ul>
+        <ul v-if="!showItems">
+            <li v-for="item in items1">{{ item }}</li>
+        </ul>
+        <button @click="showItem">Показать Массив</button> <br>
+
+        <p v-if="showName">{{ name }}</p> <br>
+        <button @click="showww">
+            {{ showName ? 'Скрыть Имя' : 'Показать Имя' }}
+        </button> <br>
+
+        <p v-if="hello">Здравствуйте, {{ nameUser }}</p>
+        <p v-else>Достидания, {{ nameUser }}</p> <br>
+        <button @click="username">
+            {{ hello ? 'Попрощаться' : 'Поприветствоваться' }}
+        </button> <br>
+
+        <p v-if="day == 1">Понедельник</p>
+        <p v-if="day == 2">Вторник</p>
+        <p v-if="day == 3">Среда</p>
+        <p v-if="day == 4">Четверг</p>
+        <p v-if="day == 5">Пятница</p>
+        <p v-if="day == 6">Суббота</p>
+        <p v-if="day == 7">Воскресенье</p> <br>
+
+        <p v-if="age < 18">Подросток</p>
+        <p v-else-if="age >= 19 && age < 25">Молодой человек</p>
+        <p v-else="age > 26">Мужчина</p>
+        <br>
+
+        <template v-if="temp">
+            <h1>Заголовок</h1>
+            <p>Абзац 1</p>
+            <p>Абзац 2</p>
+        </template> <br>
+        <button @click="tempClick">
+            {{ temp ? 'Скрыть' : 'Показать' }}
+        </button> <br>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

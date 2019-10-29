@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <p> {{ text }} </p>
+        <button v-on:click="changeUser">Изменить юзера</button> <br>
+
+        <button v-on:click="sayHello('Вася')">Поприветствоваться!</button> <br>
+        <button v-on:click="sayHello('Петя')">Поприветствоваться!</button> <br>
+
+        <ul>
+            <li v-for="(item,index) in items" v-on:click="removeNumber(index)">
+                {{ item }}
+            </li>
+        </ul> <br>
+
+        <ul>
+            <li v-for="(item,index) in items2" @click="doubleNumber(item,index)">
+                {{ item }}
+            </li>
+        </ul> <br>
+
+        <ul>
+            <li v-for="(item,index) in items3" @click="plusString(item,index)">
+                {{ item }}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

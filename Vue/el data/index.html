@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+    <div id="app">
+        {{ name }}
+        {{ surname }} <br>
+        {{ num * num }} <br>
+        {{ num1 + num2 + num3 }} <br>
+        {{ arr[0] + arr[1] + arr[2] }} <br>
+        {{ obj.a + obj.b + obj.c }} <br>
+        <ul>
+            <li v-for="number in arr1">{{ number }}</li>
+        </ul>
+        <ul>
+            <li v-for="(user,index) in arr2">{{ user }} - {{ index }}</li>
+        </ul>
+        <ul>
+            <li v-for="(user,index) in arr3">{{ user }} - {{ index + 1}}</li>
+        </ul>
+        <ul>
+            <li v-for="value in obj1">{{ value }}</li>
+        </ul>
+        <ul>
+            <li v-for="(value, key) in obj1">{{ key }} - {{ value }}</li>
+        </ul>
+        <ul>
+            <li v-for="(value, key, index) in obj1">{{ key }} - {{ value }} - {{ index }}</li>
+        </ul>
+        <ul>
+            <li v-for="(value, key, index) in obj1">{{ key }} - {{ value }} - {{ index + 1 }}</li>
+        </ul>
+        <ul>
+            <li v-for="link in hrefs"><a href="{{ link.href }}">{{ link.text }}</a></li>
+        </ul>
+        <ul>
+            <li v-for="product in products">{{product.name}}, Цена: {{product.price}}, Количество: {{product.quantity}}, Сумма: {{product.price * product.quantity}}</li>
+        </ul>
+        <ul>
+            <template v-for="item in items">
+                <li>{{ item }}</li>
+                <li>{{ item }}</li>
+                <li>{{ item }}</li>
+            </template>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
