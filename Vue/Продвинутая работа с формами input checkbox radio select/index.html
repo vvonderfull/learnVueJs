@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <textarea v-model="message"></textarea>
+        <p>Ваше сообщение: {{ message }}</p>
+        <br>
+
+        <textarea v-model="text"></textarea> <br>
+        <button @click="formArr">Разбить на массив</button>
+        <ul>
+            <li v-for="item in items">
+                {{ item }}
+            </li>
+        </ul>
+
+        <input type="checkbox" v-model="check">
+        <p>Состояние: {{ check }}</p>
+        <br>
+
+        <input type="checkbox" v-model="check1">
+        <p v-if="check1">Привет</p>
+
+        <input type="checkbox" v-model="check2">
+        <p>{{ check2 ? 'отмечен' : 'не отмечен' }}</p>
+        <br>
+
+        <input type="checkbox" v-model="arr" value="Hello">
+        <input type="checkbox" v-model="arr" value="User">
+        <input type="checkbox" v-model="arr" value="!">
+        <p>{{ arr }}</p>
+
+        <input type="checkbox" v-model="arr1" value="Hello">
+        <input type="checkbox" v-model="arr1" value="User">
+        <input type="checkbox" v-model="arr1" value="!">
+        <ul>
+            <li v-for="item in arr1">
+                {{ item }}
+            </li>
+        </ul>
+        <input name="radio" type="radio" v-model="type" value="ru">
+        <input name="radio" type="radio" v-model="type" value="en">
+        <input name="radio" type="radio" v-model="type" value="de">
+        <p v-if="type == 'ru'">Привет, мое имя Игорь!</p>
+        <p v-if="type == 'en'">Hello, my name is Igor</p>
+        <p v-if="type == 'de'">Zer Good!</p>
+        <br>
+
+        <p>В каком городе вы живете?</p>
+        <select v-model="selected">
+            <option>Томск</option>
+            <option>Москва</option>
+            <option>Новосибирск</option>
+        </select>
+        <p>Вы живете в городе: {{ selected }}</p>
+        <br>
+
+        <p>Что вы ходтите съесть?</p>
+        <select v-model="sel">
+            <option v-for="item in options">{{ item }}</option>
+        </select>
+        <p>Вы хотите съесть: {{ sel }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

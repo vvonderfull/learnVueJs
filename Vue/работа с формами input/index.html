@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <input v-model="message">
+        <p>{{ message }}</p> <br>
+
+        <input v-model="number">
+        <button @click="calc">Посчитать</button>
+        <p>Результат: {{ result }}</p> <br>
+
+        <input v-model="number1"> <input v-model="number2"> <br>
+        <button @click="sum">Посчитать</button>
+        <p>Результат: {{ resultSum }}</p> <br>
+
+        <input v-model="text1"> <input v-model="text2"> <br>
+        <button @click="textSwap">Посчитать</button> <br>
+        <br>
+        <input v-model="FIO">
+        <button @click="cut">Вписать</button>
+        <p>{{ name }}</p>
+        <p>{{ fam }}</p>
+        <p>{{ otch }}</p>
+        <br>
+
+        <input v-model="elem">
+        <button @click="elemPush">Добавить</button>
+        <ul>
+            <template v-for="(item, index) in items">
+                <li>{{ item }}</li>
+                <button @click="del1">Удалить</button>
+                <br>
+            </template>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

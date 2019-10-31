@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <input v-model="text">
+        <p>Результат: {{ text.toUpperCase() }}</p>
+        <br>
+
+        <input v-model="year">
+        <p>Вы {{ 2019 - year }} года рождения!</p>
+        <br>
+
+        <input v-model="textRev">
+        <p>Результат: {{ textReverse(textRev) }}</p>
+        <br>
+
+        <input @change="textSwap1" v-model="text1">
+        <input @change="textSwap2" v-model="text2">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
