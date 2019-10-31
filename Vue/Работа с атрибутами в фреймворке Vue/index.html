@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <p v-bind:id="str"></p>
+        <br>
+
+        <input type="text" v-bind:disabled="dis">
+        <button @click="mood">Кнопка</button>
+        <br>
+        <input type="checkbox" v-model="dis">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
