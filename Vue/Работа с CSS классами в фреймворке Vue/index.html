@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+    <style>
+        .logo {
+            font-size: 20px;
+        }
+    </style>
+
+    <div id="app">
+        <p v-bind:class="cssClasses">Hello</p>
+        <p v-bind:class="{valid: isValid}">Hello</p>
+        <p v-bind:class="{valid: isValid, 'task-done': isDone}">Hello</p>
+        <button @click="fDone">Добавить класс</button>
+        <br>
+        <p v-bind:class="cssClasses">Hello</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

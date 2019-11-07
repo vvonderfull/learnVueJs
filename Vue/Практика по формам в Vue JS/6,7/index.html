@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <ul>
+            <template v-for="(product,index) in products">
+                <li @click="showInput">
+                    {{ product.name }}: Цена: {{ product.price }}, Количество: {{ product.quantity }}, Сумма: {{ product.price * product.quantity }}
+                </li>
+                <input type="text" v-if="show" @input="createName" v-model="cName">
+                <input type="text" v-if="show" @input="createName" v-model="cPrice">
+                <input type="text" v-if="show" @input="createName" v-model="cQuantity">
+            </template>
+            <li v-for="product in products" @click="deleteProduct">
+                Удалить: {{ product.name }}
+            </li>
+        </ul>
+        <input type="text" v-model="name">
+        <input type="text" v-model="price">
+        <input type="text" v-model="quantity">
+        <button @click="pushProduct">Добавить</button>
+        <p> Полная стоимость продуктов: {{ calc() }}</p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

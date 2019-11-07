@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <button v-if="!but" @click="go">Начать игру!</button> <br>
+        <input type="text" v-model="cont">
+        <button @click="game">Проверить</button>
+        <p>{{ error }}</p>
+        <button v-if="but" @click="letsGo">Начать сначала!</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <p v-bind:style="{color: color}">Hello</p>
+        <button @click="swap">RED</button>
+        <br>
+
+        <p v-bind:style="{color: color}">Hello</p>
+        <input type="checkbox" @click="swap">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

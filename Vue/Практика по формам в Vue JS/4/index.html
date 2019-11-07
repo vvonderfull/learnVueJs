@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <ul>
+            <li v-for="product in products">
+                {{ product.name }}: Цена: {{ product.price }}, Количество: {{ product.quantity }}, Сумма: {{ product.price * product.quantity }}
+            </li>
+        </ul>
+        <p> {{ calc() }} </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
